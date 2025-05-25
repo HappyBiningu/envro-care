@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-/envirocare_client/envirocare-client/node_modules
-/envirocare_client/envirocare-client/dist   
+  
 myenv 
 

@@ -15,6 +15,7 @@ PYTHONPATH = "${PYTHONPATH}:${REPL_HOME}/envirocare-backend-main"
 DJANGO_SETTINGS_MODULE = "envirocare.settings"
 
 [workflows]
+runButton = "Django Server"
 
 [[workflows.workflow]]
 name = "React Dev Server"
@@ -23,4 +24,13 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd envirocare_client && npm run dev"
+args = "cd envirocare_client && npm install && npm run dev"
+
+[[workflows.workflow]]
+name = "Django Server"
+author = 40534815
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd envirocare-backend-main && python manage.py migrate && python manage.py runserver 0.0.0.0:5000"

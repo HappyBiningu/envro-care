@@ -1,0 +1,8 @@
+modules = ["python-3.12", "web"]
+run = "npm run dev && python manage.py run server"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm run dev && python manage.py run server"]

@@ -27,5 +27,3 @@ dist-ssr
 /envirocare_client/envirocare-client/dist   
 myenv 
 
-/envirocare_client/.env
-/envirocare_client/.env.local 
